@@ -33,7 +33,7 @@ app.get("/api/:date?", (req,res)=>{
   if(!dateParam){
     date = new Date();
   } else if (/^\d+$/.test(dateParam)) {
-    date = new Date(ParseInt(dateParam));
+    date = new Date(parseInt(dateParam));
   } else{
     date = new Date(dateParam);
   }
